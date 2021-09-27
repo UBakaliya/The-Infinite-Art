@@ -21,13 +21,14 @@ function setup() {
 function draw() {
 
   for(let i = 0; i < circles.length; i++) {
-    fill(random(30, 255), random(100, 255),random(20, 255), random(0, 255));
+    fill(random(150, 255), random(50, 255),random(10, 255), random(20, 255));
     noStroke();
     circles[i].y++;
     if(circles[i].y > height) {
       circles[i].y = 1;
       
-      ellipse(x, y, r*100, r*1);
+      ellipse(x, y, r*1, r*100);
+      rect(x, y, r*100, r*1);
   
     x += xspeed;
     y += yspeed;
@@ -41,7 +42,7 @@ function draw() {
 
 }
       
-    circle(circles[i].x, circles[i].y, 5);
+    circle(circles[i].x, circles[i].y, 4);
       
     }
 
