@@ -1,24 +1,49 @@
 let circles = [];
 
 let ball;
+
+
+let x = 220;
+let y = 280;
+let xspeed = 3;
+let yspeed = 5;
+
+let r = 20;
 function setup() {
+   alert('When you run the program it starts drawing lines vertically as it draws the lines it starts drawing circles with the lines and it starts drawing a new line with circles, it happens continuousl as many times you run the program it changes the position of a line.')
   createCanvas(windowWidth, windowHeight);
   background(50, 200, 200);
-  for(let i = 0; i < 400; i++) {
+  for(let i = 0; i < 700; i++) {
     circles[i] = new p5.Vector(random(width), random(height));
   }
 }
 
 function draw() {
+
   for(let i = 0; i < circles.length; i++) {
- 
-    fill(random(0, 255), random(0, 255),random(0, 255), random(0, 255));
+    fill(random(30, 255), random(100, 255),random(20, 255), random(0, 255));
     noStroke();
     circles[i].y++;
     if(circles[i].y > height) {
-      circles[i].y = 10;
+      circles[i].y = 1;
+      
+      ellipse(x, y, r*100, r*1);
+  
+    x += xspeed;
+    y += yspeed;
+    if (x > height - r || x < r) {
+      xspeed = -xspeed;
+    }
+    if (y > width - r || y < r) {
+      yspeed = -yspeed;
+  }
+
+
+}
+      
+    circle(circles[i].x, circles[i].y, 5);
+      
     }
 
-    circle(circles[i].x, circles[i].y, 4);
   }
-}
+
