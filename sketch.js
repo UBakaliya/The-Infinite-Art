@@ -10,8 +10,8 @@ let yspeed = 5;
 
 let r = 20;
 function setup() {
-   alert('When you run the program it starts drawing lines vertically as it draws the lines it starts drawing circles with rectangles. As circles and rectangles move the lines overdraw on the previous drawing. It changes the position of the rectangle and circles everytime.')
-  createCanvas(windowWidth, windowHeight);
+   alert('When you run the program it starts drawing lines vertically as it draws the lines it starts drawing circles with rectangles. As circles and rectangles move the lines overdraw on the previous drawing. It changes the position of the rectangle and circles everytime. focus was on color, lines ,circles  and rectangle')
+  createCanvas(600, 600);
   background(50, 200, 200);
   for(let i = 0; i < 700; i++) {
     circles[i] = new p5.Vector(random(width), random(height));
